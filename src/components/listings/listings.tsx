@@ -10,7 +10,7 @@ import { Listing } from "@/lib/listings";
 
 
 export const Listings = ({ listings }: { listings: Listing[] }) => (
-  <div className="grid gap-4 grid-cols-4">
+  <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-12 md:mt-0">
     {listings.map((listing: Listing) => (
       <Card key={listing.id}>
         <CardHeader>
