@@ -20,6 +20,7 @@ export default function Main({ listings }: { listings: Listing[] }) {
           <li>Find a 2 bedroom apartment in Chicago</li>
           <li>I am looking for 2+ bedrooms</li>
           <li>Something in California</li>
+          <li>Townhomes and houses</li>
         </ul>
       </div>
       <div className="mt-12">
