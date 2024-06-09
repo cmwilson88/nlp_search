@@ -10,7 +10,7 @@ const baseContext: OpenAI.Chat.Completions.ChatCompletionMessageParam[] = [
   {
     role: 'system',
     content: `Extract
-      city,
+      city (formatted in lowercase),
       state (formatted in two letter abbreviation),
       zip (formatted as five digit string),
 
@@ -23,7 +23,7 @@ const baseContext: OpenAI.Chat.Completions.ChatCompletionMessageParam[] = [
       minSqft,
       maxSqft,
 
-      propertyType
+      propertyType (array of strings with possible values: house, apartment, condo, townhome, duplex, triplex, fourplex, studio, loft),
       cats (boolean),
       dogs (boolean),
       parking (boolean),
@@ -33,7 +33,7 @@ const baseContext: OpenAI.Chat.Completions.ChatCompletionMessageParam[] = [
 
     The response should be formatted as a JSON object with the extracted fields. For example, if the user input is "I'm looking for a 2 bedroom apartment in Chicago, IL", the response should be:
     {
-      "city": "Chicago",
+      "city": "chicago",
       "state": "IL",
       "propertyType": "apartment",
       "minBed": 2,

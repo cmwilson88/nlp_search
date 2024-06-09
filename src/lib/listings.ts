@@ -8,7 +8,7 @@ export interface Search {
   price?: Range;
   sqft?: Range;
 
-  propertyType?: string;
+  propertyType?: string[];
   pets?: Pets
 
 }
@@ -68,7 +68,7 @@ export const filterListings = (listings: Listing[], search: Search) => {
     if (search.sqft && (listing.sqft < (search.sqft.min ?? 0) || listing.sqft > (search.sqft.max ?? Infinity))) {
       return false;
     }
-    if (search.propertyType && downcase(listing.property_type) !== downcase(search.propertyType)) {
+    if (search.propertyType && !search.propertyType.includes(downcase(listing.property_type))) {
       return false;
     }
     if (search.pets) {
