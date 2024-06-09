@@ -14,6 +14,15 @@ export default function Main({ listings }) {
     <>
       <h1 className="text-4xl text-center font-bold">Listings</h1>
       <div className="mt-12">
+        <p>Using Natural Language Processing powered by OpenAI to search for listings.</p>
+        <p>Some examples:</p>
+        <ul>
+          <li>Find a 2 bedroom apartment in Chicago</li>
+          <li>I'm looking for 2+ bedrooms</li>
+          <li>Something in California</li>
+        </ul>
+      </div>
+      <div className="mt-12">
         <SearchForm setSearch={setSearch} />
       </div>
       <div className="grid grid-cols-4 mt-12">

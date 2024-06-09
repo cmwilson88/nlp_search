@@ -8,7 +8,9 @@ export default async function Home() {
   
   return (
     <main className="container mx-auto">
-      <Main listings={listings} />
+      <div className="pt-8">
+        <Main listings={listings} />
+      </div>
     </main>
   );
 }

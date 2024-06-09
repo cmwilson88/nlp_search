@@ -38,6 +38,7 @@ export default function SearchForm({ setSearch }) {
   }
   return (
     <form action={formAction}>
+      <label className="block text-gray-700 text-sm font-bold mb-2">Search</label>
       <input type="text" name="search" className="w-full p-2 border border-gray-300 rounded" placeholder="Search Listings" />
       <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-2 rounded">Submit</button>
     </form>   
