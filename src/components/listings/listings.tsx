@@ -6,12 +6,13 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { Listing } from "@/lib/listings";
 
 
-export const Listings = ({ listings }) => (
+export const Listings = ({ listings }: { listings: Listing[] }) => (
   <div className="grid gap-4 grid-cols-4">
-    {listings.map((listing) => (
-      <Card>
+    {listings.map((listing: Listing) => (
+      <Card key={listing.id}>
         <CardHeader>
           <CardTitle>{listing.street}</CardTitle>
           <CardDescription>{`${listing.city}, ${listing.state} ${listing.zip}`}</CardDescription>
