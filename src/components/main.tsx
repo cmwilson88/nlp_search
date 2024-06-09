@@ -1,10 +1,10 @@
 'use client';
 import { Listings } from '@/components/listings/listings';
-import { filterListings } from '@/lib/listings';
+import { Listing, filterListings } from '@/lib/listings';
 import { FormEvent, useState } from 'react'
 import SearchForm from '@/components/form/form';
 
-export default function Main({ listings }) {
+export default function Main({ listings }: { listings: Listing[] }) {
   const [search, setSearch] = useState({})
   
 

@@ -1,10 +1,11 @@
+import { Search } from '@/lib/listings';
 import { createSearch } from '../../app/actions';
 
-export default function SearchForm({ setSearch }) {
+export default function SearchForm({ setSearch }: { setSearch: (search: Search) => void }) {
   const formAction = async (formData: FormData) => {
     const userInput = formData.get('search')
     const searchResponse = await createSearch(userInput || '') 
-    const parsedResponse = JSON.parse(searchResponse)
+    const parsedResponse = JSON.parse(searchResponse!)
 
     const newSearch = {
       city: parsedResponse.city,

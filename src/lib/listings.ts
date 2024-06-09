@@ -1,4 +1,4 @@
-interface Search {
+export interface Search {
   city?: string;
   state?: string;
   zip?: string;
