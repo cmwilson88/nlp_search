@@ -18,7 +18,7 @@ export default function Main({ listings }) {
         <p>Some examples:</p>
         <ul>
           <li>Find a 2 bedroom apartment in Chicago</li>
-          <li>I'm looking for 2+ bedrooms</li>
+          <li>I am looking for 2+ bedrooms</li>
           <li>Something in California</li>
         </ul>
       </div>
